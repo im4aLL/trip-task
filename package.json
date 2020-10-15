@@ -1,0 +1,12 @@
+{
+  "name": "trip-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jasmine",
+    "start": "node app.js"
+  },
+  "author": "Habib Hadi <hadicse@gmail.com>",
+  "license": "ISC"
+}
