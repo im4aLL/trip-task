@@ -24,19 +24,11 @@ class Trip {
      * @return string
      */
     getStartingPlace() {
-        let startPlace = null;
-
-        this.trips.forEach(trip => {
-            if (!startPlace) {
-                startPlace = trip[0];
-            }
-
-            if (startPlace === trip[1]) {
-                startPlace = trip[0];
-            }
-        });
-
-        return startPlace;
+        const startingPlaces = this.trips.map(trip => trip[0]);
+        const destinationPlaces = this.trips.map(trip => trip[1]);
+        const result = startingPlaces.filter(startingPlace => !destinationPlaces.includes(startingPlace));
+        
+        return result.length ? result[0] : null;
     }
 }
 
