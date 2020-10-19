@@ -38,12 +38,15 @@ class Trip {
 
         // return startPlace;
 
-
+        if (this.trips.length === 0) {
+            return null;
+        }
+        
         const startingPlaces = this.trips.map(trip => trip[0]);
         const destinationPlaces = this.trips.map(trip => trip[1]);
         const result = startingPlaces.filter(startingPlace => !destinationPlaces.includes(startingPlace));
         
-        return result.length ? result[0] : null;
+        return result.length ? result[0] : "Doesn't matter, anywhere!";
     }
 }
 
